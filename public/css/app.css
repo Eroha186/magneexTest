@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  overflow: hidden;
+}
+
+.header-container {
+  background: url("/images/header.jpg") no-repeat;
+  position: relative;
+}
+
+.header-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 1px);
+  right: -100%;
+  top: 0;
+  background: url("/images/header-right.jpg");
+  overflow: hidden;
+}
+
+.header-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 1px);
+  left: -100%;
+  top: 0;
+  background: url("/images/header-left.jpg");
+  overflow: hidden;
+}
+
+.header-top {
+  padding-top: 35px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-top .logo {
+  padding-left: 40px;
+}
+
+.header-contact-info {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.header-contact-info .phone {
+  margin-left: 130px;
+  margin-right: 85px;
+  padding-left: 40px;
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header-contact-info .phone span {
+  display: inline-block;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #887C4E;
+}
+
+.header-contact-info .phone::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background: url("/images/icons/phone.png");
+}
+
+.header-contact-info .street {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 40px;
+}
+
+.header-contact-info .street span {
+  font-size: 13px;
+  font-weight: normal;
+  display: block;
+}
+
+.header-contact-info .street span a {
+  color: black;
+}
+
+.header-contact-info .street::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background: url("/images/icons/mark-map.png");
+}
+
+.header-menu {
+  padding: 15px 20px;
+}
+
+.header-menu .nav-item {
+  list-style: none;
+  margin-right: 50px;
+}
+
+.header-menu .nav-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.header-menu .nav-item:nth-child(3) {
+  margin-left: 40px;
+}
+
+.header-menu .nav-items {
+  display: flex;
+}
+
+.wrap-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-message .message::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("/images/icons/message.png");
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wrap-message .dialog::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("/images/icons/dialog.png");
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wrap-message .realtor::before,
+.wrap-message .mortgage::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: url("/images/icons/pencil.png");
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.white-link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted white;
+  font-size: 14px;
+}
+
+.black-link {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dotted black;
+  font-size: 14px;
+}
+
+.message-item {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #716690;
+  color: white;
+  padding: 6px 0;
+}
+
+footer .white-link {
+  font-size: 16px;
+}
+
