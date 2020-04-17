@@ -1,0 +1,221 @@
+#filter-section
+    padding-top: 80px
+    padding-bottom: 40px
+    background: url("/images/slider-city.jpg") no-repeat center
+    background-size: cover
+.section-title
+    color: $purple
+    font-size: 30px
+    text-transform: uppercase
+    padding-left: 10px
+    border-left: 3px solid $beige
+    margin-bottom: 40px
+    span
+       display: block
+       line-height: 28px
+       margin-bottom: 10px
+.filter
+    padding: 25px
+    background: $filter-bg
+    &-title
+        display: block
+        font-size: 18px
+        font-weight: bold
+        margin-bottom: 15px
+    &-header
+        display: flex
+        justify-content: space-between
+        margin-bottom: 30px
+        .all-object
+            span
+                font-size: 18px
+                font-weight: bold
+        .rol-up
+            cursor: pointer
+    &-bottom
+        display: flex
+        justify-content: space-between
+        .advanced-filter-btn
+            display: flex
+            align-items: center
+            cursor: pointer
+    &-btn
+        padding: 10px
+        background: $purple
+        color: $white
+        span
+            font-weight: bold
+
+    .numbers-room
+        margin-right: 80px
+        &-item
+            &s
+                display: flex
+            display: block
+            width: 40px
+            padding: 10px 0
+            margin-right: 3px
+            text-align: center
+            background: $white
+            font-size: 16px
+            font-weight: bold
+            color: $black
+            cursor: pointer
+            &:hover
+                padding: 6px 0
+                border: 2px solid $beige
+            &_active
+                padding-top: 8px
+                border-top: 2px solid $light_brown
+                background: $beige
+    .street
+        margin-right: 80px
+        position: relative
+        #street
+            padding: 11px 90px 11px 40px
+        .wrap-input-street
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                width: 40px
+                height: 40px
+                background: url("/images/icons/search.png")
+                left: 0
+                z-index: 1
+        &::before
+            content: ''
+            position: absolute
+            width: 1px
+            height: 40px
+            background: $darkgrey
+            bottom: 0
+            left: -40px
+        &::after
+            content: ''
+            position: absolute
+            width: 1px
+            height: 40px
+            background: $darkgrey
+            bottom: 0
+            right: -40px
+    .district
+        #district
+            padding: 11px 25px 11px 40px
+        .wrap-input-district
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                width: 40px
+                height: 40px
+                background: url("/images/icons/burger.png")
+                left: 0
+                z-index: 1
+    .wall-materials
+        padding-bottom: 10px
+        .wall-materials-item
+            &s
+                display: flex
+            display: flex
+            align-items: center
+            padding: 2px 15px 2px 2px
+            margin-right: 15px
+            background: $white
+            &:hover
+                padding: 0px 13px 0px 0px
+                border: 2px solid $beige
+            &_active
+                padding-top: 0
+                border-top: 2px solid $light_brown
+                background: $beige
+    .advanced-filter
+        display: flex
+        padding-top: 40px
+        padding-bottom: 40px
+        border-top: 1px solid $darkgrey
+        .price
+            margin-right: 80px
+            &-title
+                margin-right: 30px
+            &-wrap
+                display: flex
+                margin-bottom: 25px
+            &-min,
+            &-max
+                display: flex
+                align-items: center
+                margin-right: 10px
+                padding-top: 10px
+                label
+                    margin-right: 5px
+            &-min-input,
+            &-max-input
+                width: 90px
+                padding: 11px 7px
+        .area
+            position: relative
+            &-title
+                margin-right: 30px
+            &-wrap
+                display: flex
+                margin-bottom: 25px
+            &-min,
+            &-max
+                display: flex
+                align-items: center
+                margin-right: 10px
+                padding-top: 10px
+                label
+                    margin-right: 5px
+            &-min-input,
+            &-max-input
+                width: 90px
+                padding: 11px 7px
+            &::before
+                content: ''
+                position: absolute
+                width: 1px
+                height: 40px
+                background: $darkgrey
+                top: 50%
+                left: -40px
+                transform: translateY(-25%)
+.wrap-filters
+    display: flex
+    margin-bottom: 40px
+.tab-items
+    display: flex
+
+.tab-item
+    padding: 15px 20px
+    margin-right: 3px
+    margin-bottom: 3px
+    color: $black
+    font-size: 14px
+    background: $white-opacity
+    cursor: pointer
+    &_active
+        color: $white
+        background: $purple
+
+// стилизация range input
+.ui-slider-horizontal
+    height: 5px
+
+.ui-widget.ui-widget-content
+    border: none
+
+.ui-slider .ui-slider-handle
+    width: 20px
+    height: 20px
+    border: none
+    border-radius: 50%
+    background: $purple
+
+.ui-slider-horizontal .ui-slider-handle
+    top: -.5em
+
+.ui-slider .ui-slider-range
+    background: $purple
+    border: 1px solid $purple

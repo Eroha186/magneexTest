@@ -93,7 +93,148 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+$(function () {
+  $('.tab-item').on('click', function () {
+    $('.tab-item').each(function () {
+      $(this).removeClass('tab-item_active');
+    });
+    $(this).toggleClass('tab-item_active');
+  });
+  $('.numbers-room-item').on('click', function () {
+    $('.numbers-room-item').each(function () {
+      $(this).removeClass('numbers-room-item_active');
+    });
+    $(this).toggleClass('numbers-room-item_active');
+  });
+  $('.wall-materials-item').on('click', function () {
+    $('.wall-materials-item').each(function () {
+      $(this).removeClass('wall-materials-item_active');
+    });
+    $(this).toggleClass('wall-materials-item_active');
+  });
+  var advancedFilter = $('.advanced-filter');
+  advancedFilter.hide();
+  $('.advanced-filter-btn').on('click', function () {
+    if (advancedFilter.is(':visible')) {
+      advancedFilter.hide();
+    } else {
+      advancedFilter.show();
+    }
+  });
+  var priceRange = $('#price-range');
+  var areaRange = $('#area-range');
+  priceRange.slider({
+    animate: "slow",
+    range: true,
+    values: getPrice(),
+    min: getMinPrice(),
+    max: getMaxPrice(),
+    slide: function slide(event, ui) {
+      $('#from-price').val(ui.values[0]);
+      $('#before-price').val(ui.values[1]);
+    }
+  });
+  areaRange.slider({
+    animate: "slow",
+    range: true,
+    values: getArea(),
+    min: getMinArea(),
+    max: getMaxArea(),
+    slide: function slide(event, ui) {
+      $('#from-area').val(ui.values[0]);
+      $('#before-area').val(ui.values[1]);
+    }
+  });
 
+  function getMaxPrice() {
+    return $('.price-max').data('max');
+  }
+
+  function getMinPrice() {
+    return $('.price-min').data('min');
+  }
+
+  function getMaxArea() {
+    return $('.area-max').data('max');
+  }
+
+  function getMinArea() {
+    return $('.area-min').data('min');
+  }
+
+  function getPrice() {
+    return [$('#from-price').val(), $('#before-price').val()];
+  }
+
+  ;
+
+  function getArea() {
+    return [$('#from-area').val(), $('#before-area').val()];
+  }
+
+  ;
+  $('.input-range').on('input', function () {
+    $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''));
+  });
+  $('#from-price').on('change', function () {
+    var val = $(this).val();
+
+    if (val < getMinPrice()) {
+      $(this).val(getMinPrice());
+    }
+
+    if (val > priceRange.slider("values", 1)) {
+      $(this).val(priceRange.slider("values", 1));
+      $(this).trigger('input');
+    }
+  });
+  $('#before-price').on('change', function () {
+    var val = $(this).val();
+
+    if (val < priceRange.slider("values", 0)) {
+      $(this).val(priceRange.slider("values", 0));
+    }
+
+    if (val > getMaxPrice()) {
+      $(this).val(getMaxPrice());
+    }
+  });
+  $('#from-area').on('change', function () {
+    var val = $(this).val();
+
+    if (val < getMinArea()) {
+      $(this).val(getMinArea());
+    }
+
+    if (val > areaRange.slider("values", 1)) {
+      $(this).val(areaRange.slider("values", 1));
+    }
+  });
+  $('#before-area').on('change', function () {
+    var val = $(this).val();
+
+    if (val < areaRange.slider("values", 0)) {
+      $(this).val(areaRange.slider("values", 0));
+    }
+
+    if (val > getMaxArea()) {
+      $(this).val(getMaxArea());
+    }
+  });
+  $('#from-price').on('input', function () {
+    var val = $(this).val();
+
+    if (val < priceRange.slider("values", 0)) {
+      priceRange.slider("values", 0, $(this).val());
+    } else {
+      priceRange.slider("values", 0, priceRange.slider("values", 1));
+    }
+  });
+  $('form.filter').on('submit', function (e) {
+    e.preventDefault();
+    console.log($(this).serializeArray());
+  });
+});
 
 /***/ }),
 
