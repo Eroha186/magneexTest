@@ -240,7 +240,6 @@ header {
 .filter-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
 }
 
 .filter-header .all-object span {
@@ -250,6 +249,10 @@ header {
 
 .filter-header .rol-up {
   cursor: pointer;
+}
+
+.filter-body {
+  margin-top: 30px;
 }
 
 .filter-bottom {

@@ -20,15 +20,27 @@ $(function () {
         $(this).toggleClass('wall-materials-item_active');
     })
 
+    $('.rol-up').on('click', function () {
+        if($('.filter-body').is(':visible')) {
+            $('.filter-body').hide();
+            $(this).text('Развернуть фильтр')
+        } else {
+            $('.filter-body').show();
+            $(this).text('Свернуть')
+        }
+    })
+
     let advancedFilter = $('.advanced-filter');
 
     advancedFilter.hide();
 
     $('.advanced-filter-btn').on('click', function () {
         if(advancedFilter.is(':visible')) {
-            advancedFilter.hide()
+            advancedFilter.hide();
+            $(this).children('img').attr('src', '/images/icons/plus.png');
         } else {
-            advancedFilter.show()
+            advancedFilter.show();
+            $(this).children('img').attr('src', '/images/icons/minus.png');
         }
     })
 
