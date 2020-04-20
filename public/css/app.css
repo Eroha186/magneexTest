@@ -11,7 +11,23 @@
 }
 
 .btn {
+  padding: 10px;
+  background: #716690;
+  color: white;
   border: none;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #716690;
+}
+
+.title-section img {
+  margin-right: 10px;
 }
 
 input {
@@ -266,12 +282,6 @@ header {
   cursor: pointer;
 }
 
-.filter-btn {
-  padding: 10px;
-  background: #716690;
-  color: white;
-}
-
 .filter-btn span {
   font-weight: bold;
 }
@@ -336,7 +346,7 @@ header {
   position: absolute;
   width: 1px;
   height: 40px;
-  background: darkgrey;
+  background: #bebebe;
   bottom: 0;
   left: -40px;
 }
@@ -346,7 +356,7 @@ header {
   position: absolute;
   width: 1px;
   height: 40px;
-  background: darkgrey;
+  background: #bebebe;
   bottom: 0;
   right: -40px;
 }
@@ -400,7 +410,7 @@ header {
   display: flex;
   padding-top: 40px;
   padding-bottom: 40px;
-  border-top: 1px solid darkgrey;
+  border-top: 1px solid #bebebe;
 }
 
 .filter .advanced-filter .price {
@@ -472,7 +482,7 @@ header {
   position: absolute;
   width: 1px;
   height: 40px;
-  background: darkgrey;
+  background: #bebebe;
   top: 50%;
   left: -40px;
   transform: translateY(-25%);
@@ -525,6 +535,197 @@ header {
 .ui-slider .ui-slider-range {
   background: #716690;
   border: 1px solid #716690;
+}
+
+.news {
+  background: #f3f3f3;
+}
+
+.news .container {
+  padding: 40px 0px;
+  border-bottom: 1px solid #bebebe;
+}
+
+.news .topics-items {
+  display: flex;
+  align-items: center;
+}
+
+.news .topics-item {
+  list-style: none;
+  margin-right: 25px;
+  font-size: 12px;
+}
+
+.news .topics-item_active {
+  padding: 10px;
+  background: #e8e8e8;
+}
+
+.news .topics-item_active .black-link {
+  border: none;
+}
+
+.news .wrap-topics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.news-list {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.news-list-item {
+  width: 25%;
+  margin-right: 25px;
+}
+
+.news-list-item .topic {
+  position: relative;
+  font-size: 12px;
+  color: #C8B883;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.news-list-item .news-company::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("/images/icons/news-company.png");
+  top: -50%;
+  transform: translateX(-90%);
+}
+
+.news-list-item .news-market::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("/images/icons/news-market.png");
+  top: -50%;
+  transform: translateX(-90%);
+}
+
+.news-list-item .news-interview::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("/images/icons/news-interview.png");
+  top: -50%;
+  transform: translateX(-90%);
+}
+
+.news-list-item .news-about-us::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("/images/icons/news-about-us.png");
+  top: -50%;
+  transform: translateX(-90%);
+}
+
+.news-list-item .cover {
+  margin-bottom: 15px;
+  width: 220px;
+  height: 150px;
+}
+
+.news-list-item .cover img {
+  width: 100%;
+  height: 100%;
+}
+
+.news-list-item .date {
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.news-list-item .title {
+  font-size: 12px;
+}
+
+.news .archive-btn {
+  width: 20%;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.news .archive-btn img {
+  margin-right: 7px;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-form-input {
+  height: 40px;
+  width: 140px;
+  border: 2px solid #bebebe;
+  padding: 5px;
+  margin-right: 25px;
+  background: #f3f3f3;
+}
+
+.subscribe-form-btn {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px 0px 5px;
+}
+
+.about-company {
+  padding: 60px 0px;
+  position: relative;
+  background: #f3f3f3;
+}
+
+.about-company .house {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.about-company .container {
+  position: relative;
+  z-index: 2;
+  padding-left: 350px;
+}
+
+.about-company p {
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.about-company .section-title {
+  color: #716690;
+  font-size: 24px;
+  padding: unset;
+  border: unset;
+  text-transform: unset;
+  margin-bottom: 20px;
+}
+
+.about-company-btn {
+  width: 150px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.about-company-btn img {
+  margin-right: 7px;
 }
 
 footer {

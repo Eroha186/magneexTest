@@ -14,6 +14,10 @@
 
     @include('filter')
 
+    @include('news.news')
+
+    @include('about-company')
+
     @include('header_and_footer.footer')
 
     <script src="{{ asset('js/jquery.js') }}"></script>

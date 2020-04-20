@@ -1,19 +1,39 @@
+@import "variable"
+
 *
     margin: 0
     padding: 0
     font-family: Roboto, sans-serif
     box-sizing: border-box
 
+
 .container
     width: 960px
     margin: 0 auto
+
 .btn
+    padding: 10px
+    background: $purple
+    color: $white
     border: none
+
+.title-section
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    font-size: 18px
+    font-weight: bold
+    color: $purple
+
+    img
+        margin-right: 10px
+
 input
     border: none
 
-@import "variable"
 @import "header"
 @import "filter-section"
+@import "news-section"
+@import "about-company"
 @import "footer"
 
