@@ -245,6 +245,13 @@ $(function () {
     e.preventDefault();
     console.log($(this).serializeArray());
   });
+  $('.slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next')
+  });
 });
 
 /***/ }),

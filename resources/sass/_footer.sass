@@ -1,6 +1,96 @@
 footer
-    background: $purple
-    color: $white
-    padding: 6px 0
-    .white-link
-        font-size: 16px
+    background: $bg-footer
+    padding-top: 40px
+    .footer
+        &-bottom
+            background: $purple
+            color: $white
+            padding: 6px 0
+            .white-link
+                font-size: 16px
+        &-content
+            display: flex
+            justify-content: space-between
+            .wrap
+                padding-top: 20px
+        &-contact
+            padding-top: 40px
+            font-size: 12px
+            div
+                margin-bottom: 5px
+            .phone
+                a
+                    color: black
+                    text-decoration: unset
+            .name-company
+                font-weight: bold
+            .social-links
+                display: flex
+                margin-top: 40px
+            .social-link
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-right: 15px
+                width: 50px
+                height: 50px
+                background: $bg-social-link
+                &:hover
+                    background: $bg-active-social-link
+.slider
+    width: 470px
+    padding: 25px 5px 25px 25px
+    background: $bg-social-link
+    &-wrap
+        position: relative
+    img
+        margin-right: 20px
+        height: 60px
+        width: 125px
+    &-header
+        display: flex
+        align-items: center
+        padding-bottom: 20px
+        margin-bottom: 20px
+        border-bottom: 1px solid $darkgrey
+        .phone
+            display: flex
+            align-items: center
+            margin-right: 30px
+            font-size: 24px
+            font-weight: bold
+            a
+                color: $purple
+                text-decoration: none
+        .email
+            display: flex
+            align-items: center
+.prev
+    cursor: pointer
+    &::after
+        content: ''
+        position: absolute
+        left: 0px
+        top: 50%
+        transform: translateY(-50%)
+        border: 7px solid transparent
+        border-right: 7px solid black
+        z-index: 3
+    &:hover
+        &:after
+            border-right: 7px solid $purple
+.next
+    cursor: pointer
+    &::after
+        content: ''
+        position: absolute
+        right: 0px
+        top: 50%
+        transform: translateY(-50%)
+        border: 7px solid transparent
+        border-left: 7px solid black
+        z-index: 3
+    &:hover
+        &:after
+            border-left: 7px solid $purple
+

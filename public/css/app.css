@@ -729,12 +729,143 @@ header {
 }
 
 footer {
+  background: #ebeae9;
+  padding-top: 40px;
+}
+
+footer .footer-bottom {
   background: #716690;
   color: white;
   padding: 6px 0;
 }
 
-footer .white-link {
+footer .footer-bottom .white-link {
   font-size: 16px;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-content .wrap {
+  padding-top: 20px;
+}
+
+footer .footer-contact {
+  padding-top: 40px;
+  font-size: 12px;
+}
+
+footer .footer-contact div {
+  margin-bottom: 5px;
+}
+
+footer .footer-contact .phone a {
+  color: black;
+  text-decoration: unset;
+}
+
+footer .footer-contact .name-company {
+  font-weight: bold;
+}
+
+footer .footer-contact .social-links {
+  display: flex;
+  margin-top: 40px;
+}
+
+footer .footer-contact .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  background: #dedddd;
+}
+
+footer .footer-contact .social-link:hover {
+  background: #506093;
+}
+
+.slider {
+  width: 470px;
+  padding: 25px 5px 25px 25px;
+  background: #dedddd;
+}
+
+.slider-wrap {
+  position: relative;
+}
+
+.slider img {
+  margin-right: 20px;
+  height: 60px;
+  width: 125px;
+}
+
+.slider-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bebebe;
+}
+
+.slider-header .phone {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.slider-header .phone a {
+  color: #716690;
+  text-decoration: none;
+}
+
+.slider-header .email {
+  display: flex;
+  align-items: center;
+}
+
+.prev {
+  cursor: pointer;
+}
+
+.prev::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 7px solid transparent;
+  border-right: 7px solid black;
+  z-index: 3;
+}
+
+.prev:hover:after {
+  border-right: 7px solid #716690;
+}
+
+.next {
+  cursor: pointer;
+}
+
+.next::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 7px solid transparent;
+  border-left: 7px solid black;
+  z-index: 3;
+}
+
+.next:hover:after {
+  border-left: 7px solid #716690;
 }
 
