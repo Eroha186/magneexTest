@@ -1,5 +1,7 @@
 <div class="popup-wrap">
-    <form class="popup">
+    <div class="popup-bg"></div>
+    <form class="popup" method="POST" action="{{ route('feedback') }}">
+        {{ csrf_field() }}
         <div class="title">
             Отзывы и предложения
             <span class="cross">&#10005;</span>
@@ -85,7 +87,7 @@
 
                     <input type="radio" id="rating-1" name="rating" value="1" hidden>
                     <input type="radio" id="rating-2" name="rating" value="2" hidden>
-                    <input type="radio" id="rating-3" name="rating" value="3" hidden>
+                    <input type="radio" id="rating-3" name="rating" value="3" hidden checked>
                     <input type="radio" id="rating-4" name="rating" value="4" hidden>
                     <input type="radio" id="rating-5" name="rating" value="5" hidden>
                     <input type="radio" id="rating-6" name="rating" value="6" hidden>
@@ -105,7 +107,7 @@
             </div>
             <div class="help-drag">перетащите ползунок вправо</div>
         </div>
-        <button class="btn form-btn">
+        <button class="btn form-btn form-btn-feedback">
             <img src="{{ asset('images/icons/message-from.png') }}" alt="">
             Отправить
         </button>

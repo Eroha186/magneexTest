@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('main.main');
 });
+
+Route::post('feedback', ['as' => 'feedback', 'uses' => 'FeedbackController@store']);

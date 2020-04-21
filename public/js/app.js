@@ -299,6 +299,20 @@ $(function () {
   $(".popup-open").on("click", function () {
     $('.popup-wrap').show();
   });
+  $('.popup-bg').on("click", function () {
+    $('.popup-wrap').hide();
+  }); // Валидация формы
+
+  $("#phone").mask("+7(999)999-99-99");
+  $('.form-btn-feedback').on('click', function (e) {
+    e.preventDefault();
+
+    if ($('#confirm').prop('checked')) {
+      $('form.popup').submit();
+    }
+
+    console.log($(this).serialize());
+  });
 });
 
 /***/ }),
