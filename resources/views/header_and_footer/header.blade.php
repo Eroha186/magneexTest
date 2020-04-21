@@ -6,7 +6,7 @@
                     <a href="" class="white-link">Написать письмо</a>
                 </div>
                 <div class="dialog message-item">
-                    <a href="" class="white-link">Отзывы и предложения</a>
+                    <span class="white-link popup-open">Отзывы и предложения</span>
                 </div>
             </div>
             <div class="logo">
@@ -14,10 +14,10 @@
             </div>
             <div class="wrap-message">
                 <div class="mortgage message-item">
-                    <a href="" class="black-link">Заявка ипотечному брокеру</a>
+                    <span class="black-link">Заявка ипотечному брокеру</span>
                 </div>
                 <div class="realtor message-item">
-                    <a href="" class="black-link">Заявка риэлтору</a>
+                    <span class="black-link">Заявка риэлтору</span>
                 </div>
             </div>
         </div>

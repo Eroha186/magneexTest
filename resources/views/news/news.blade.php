@@ -14,7 +14,7 @@
             </ul>
             <form class="subscribe-form">
                 <input type="email" class="subscribe-form-input" placeholder="Введите Ваш email">
-                <button class="btn subscribe-form-btn">
+                <button class="btn form-btn">
                     <img src="{{ asset('images/icons/subscribe.png') }}" alt="">
                     Подписаться
                 </button>

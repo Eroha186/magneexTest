@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+  height: 100%;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -15,6 +20,14 @@
   background: #716690;
   color: white;
   border: none;
+}
+
+.form-btn {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px 0px 5px;
+  cursor: pointer;
 }
 
 .title-section {
@@ -204,6 +217,7 @@ header {
   text-decoration: none;
   border-bottom: 1px dotted white;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .black-link {
@@ -211,6 +225,7 @@ header {
   text-decoration: none;
   border-bottom: 1px dotted black;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .message-item {
@@ -676,13 +691,6 @@ header {
   background: #f3f3f3;
 }
 
-.subscribe-form-btn {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  padding: 0 10px 0px 5px;
-}
-
 .about-company {
   padding: 60px 0px;
   position: relative;
@@ -867,5 +875,195 @@ footer .footer-contact .social-link:hover {
 
 .next:hover:after {
   border-left: 7px solid #716690;
+}
+
+.popup-wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(200, 184, 131, 0.6);
+  z-index: 10;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 20px;
+  background: #f3f3f3;
+  max-width: 486px;
+  border: 3px solid #716690;
+  z-index: 11;
+}
+
+.popup button {
+  margin-left: 100%;
+  transform: translateX(-100%);
+}
+
+.popup p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.popup .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #716690;
+}
+
+.popup .title .cross {
+  font-size: 24px;
+  color: #716690;
+  cursor: pointer;
+}
+
+.popup .form-groups {
+  padding-top: 40px;
+  border-top: 1px solid #d8d8d8;
+}
+
+.popup .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup .form-group label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.popup .form-group label sup {
+  color: red;
+}
+
+.popup .form-group input,
+.popup .form-group textarea {
+  padding: 10px 5px;
+  width: 240px;
+  border: 1px solid #d8d8d8;
+}
+
+.popup .form-group:nth-child(4) {
+  align-items: start;
+}
+
+.popup .form-group:nth-child(6) {
+  margin-bottom: 0;
+}
+
+.popup #message {
+  resize: none;
+}
+
+.rating {
+  padding-bottom: 45px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.ratings-group {
+  margin-top: 25px;
+}
+
+.rating-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dfdfdf;
+  border-radius: 20px;
+  height: 20px;
+  width: 320px;
+}
+
+.rating-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 16px;
+  cursor: pointer;
+}
+
+.rating-item .dot {
+  display: inline-block;
+  margin: 10px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #b4b4b4;
+}
+
+.rating-item_active {
+  position: relative;
+}
+
+.rating-item_active .dot {
+  position: relative;
+  margin: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #716690;
+}
+
+.rating-item_active .dot:before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #dfdfdf;
+}
+
+.rating-item_active::before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background: url("/images/smile-feedback/bg-smile.png");
+  top: -55px;
+  left: -18px;
+  z-index: 10;
+}
+
+.rating-item_active .smile {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: url("/images/smile-feedback/3.png");
+  top: -42px;
+  left: -4px;
+  z-index: 11;
+}
+
+.area-drag {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 240px;
+  border: 1px solid #d8d8d8;
+}
+
+.area-drag .draggable {
+  display: inline-block;
+}
+
+.help-drag {
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #adadad;
+  text-align: right;
 }
 

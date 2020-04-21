@@ -22,6 +22,8 @@
 
     @include('header_and_footer.footer')
 
+    @include('popup-feedback')
+
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('js/slick.min.js') }}"></script>

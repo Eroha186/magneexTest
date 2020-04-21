@@ -1,0 +1,138 @@
+.popup-wrap
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $beige-opacity
+    z-index: 10
+.popup
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 30px 20px
+    background: $bg
+    max-width: 486px
+    border: 3px solid $purple
+    z-index: 11
+    button
+        margin-left: 100%
+        transform: translateX(-100%)
+    p
+        font-size: 12px
+        margin-bottom: 20px
+    .title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 30px
+        font-size: 18px
+        font-weight: bold
+        color: $purple
+        .cross
+            font-size: 24px
+            color: $purple
+            cursor: pointer
+    .form-groups
+        padding-top: 40px
+        border-top: 1px solid #d8d8d8
+    .form-group
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 20px
+        label
+            font-size: 12px
+            font-weight: bold
+            sup
+                color: red
+        input,
+        textarea
+            padding: 10px 5px
+            width: 240px
+            border: 1px solid #d8d8d8
+        &:nth-child(4)
+            align-items: start
+        &:nth-child(6)
+            margin-bottom: 0
+    #message
+        resize: none
+.rating
+    padding-bottom: 45px
+    border-bottom: 1px solid #d8d8d8
+    &s-group
+        margin-top: 25px
+    &-list
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $bg-rating-list
+        border-radius: 20px
+        height: 20px
+        width: 320px
+    &-item
+        display: flex
+        align-items: center
+        flex-direction: column
+        padding-top: 16px
+        cursor: pointer
+        .dot
+            display: inline-block
+            margin: 10px
+            height: 10px
+            width: 10px
+            border-radius: 50%
+            background: $rating-item
+        &_active
+            position: relative
+            .dot
+                position: relative
+                margin: 0
+                height: 30px
+                width: 30px
+                border-radius: 50%
+                background: $purple
+                &:before
+                    content: ''
+                    position: absolute
+                    height: 15px
+                    width: 15px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    border-radius: 50%
+                    background: $bg-rating-list
+            &::before
+                content: ''
+                position: absolute
+                height: 70px
+                width: 70px
+                background: url("/images/smile-feedback/bg-smile.png")
+                top: -55px
+                left: -18px
+                z-index: 10
+            .smile
+                position: absolute
+                height: 40px
+                width: 40px
+                background: url("/images/smile-feedback/3.png")
+                top: -42px
+                left: -4px
+                z-index: 11
+.area-drag
+    display: flex
+    align-items: center
+    padding: 5px
+    width: 240px
+    border: 1px solid #d8d8d8
+    .draggable
+        display: inline-block
+
+.help-drag
+    margin-bottom: 20px
+    font-size: 12px
+    color: #adadad
+    text-align: right
+

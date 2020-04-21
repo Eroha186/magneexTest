@@ -45,6 +45,11 @@
                         <img src="{{ asset('images/slider.png') }}" alt="">
                         <img src="{{ asset('images/slider.png') }}" alt="">
                         <img src="{{ asset('images/slider.png') }}" alt="">
+                        <img src="{{ asset('images/slider.png') }}" alt="">
+                        <img src="{{ asset('images/slider.png') }}" alt="">
+                        <img src="{{ asset('images/slider.png') }}" alt="">
+                        <img src="{{ asset('images/slider.png') }}" alt="">
+                        <img src="{{ asset('images/slider.png') }}" alt="">
                     </div>
                     <div class="next"></div>
                 </div>

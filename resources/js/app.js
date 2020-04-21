@@ -1,4 +1,5 @@
 $(function () {
+
     $('.tab-item').on('click', function () {
         $('.tab-item').each(function () {
             $(this).removeClass('tab-item_active');
@@ -173,4 +174,52 @@ $(function () {
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
     })
+
+    $('.rating-item').on('click', function () {
+        $('.rating-item').each(function () {
+            $(this).removeClass('rating-item_active');
+        })
+        $(this).toggleClass('rating-item_active');
+        changeSmileRating($(this).data('smile'))
+    });
+
+    function changeSmileRating(smileId) {
+        $('.rating-item_active > .smile').css('background', `url(/images/smile-feedback/${smileId}.png)`)
+    }
+
+    $(".cross").on("click", function () {
+        $('.popup-wrap').hide();
+    });
+
+    // 178 конечная точка ползунка
+    $( ".draggable" ).draggable({
+        axis : "x",
+        containment: ".area-drag",
+        scroll: false,
+        drag: function (event, ui) {
+            let position = ui.position.left;
+            console.log(position);
+            if(position >= 32) {
+                $('.drag-arrow').hide();
+            }
+            if(ui.position.left === 178) {
+                $(".draggable").draggable("disable");
+                $("#confirm").prop('checked', true);
+            }
+        },
+        revert: function () {
+            let position = $(this).draggable('instance').position.left;
+            if(position < 178) {
+                setTimeout(() => {
+                    $('.drag-arrow').show();
+                }, 501);
+                return true;
+            }
+        },
+    });
+
+    $(".popup-open").on("click", function () {
+        $('.popup-wrap').show();
+
+    });
 });
