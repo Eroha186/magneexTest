@@ -14,15 +14,9 @@
 <body>
     @include('header_and_footer.header')
 
-    @include('filter')
-
-    @include('news.news')
-
-    @include('about-company')
+    @yield('content')
 
     @include('header_and_footer.footer')
-
-    @include('popup-feedback')
 
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
