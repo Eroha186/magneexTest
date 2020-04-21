@@ -47,6 +47,52 @@ input {
   border: none;
 }
 
+.breadcrumb {
+  display: flex;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.white-link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.black-link {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dotted black;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.grey-link {
+  color: #bebebe;
+  text-decoration: none;
+  border-bottom: 1px solid #bebebe;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.blue-link {
+  color: #0000FF;
+  text-decoration: none;
+  border-bottom: 1px dotted #0000FF;
+}
+
+.link-as-text {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 header {
   overflow: hidden;
 }
@@ -210,22 +256,6 @@ header {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.white-link {
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px dotted white;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.black-link {
-  color: black;
-  text-decoration: none;
-  border-bottom: 1px dotted black;
-  font-size: 14px;
-  cursor: pointer;
 }
 
 .message-item {
@@ -1068,5 +1098,67 @@ footer .footer-contact .social-link:hover {
   font-size: 12px;
   color: #adadad;
   text-align: right;
+}
+
+.contact-section {
+  padding: 40px 0px 20px 0px;
+  background: #ebeae9;
+}
+
+.contact-section .contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0 auto;
+  max-width: 270px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.contact-section .contact-btn img {
+  margin-right: 10px;
+}
+
+.contact-section .title-section {
+  margin-top: 40px;
+}
+
+.contact-info {
+  margin-right: 80px;
+  margin-bottom: 40px;
+}
+
+.contact-info-wrap {
+  display: flex;
+}
+
+.contact-info .address,
+.contact-info .phone,
+.contact-info .email {
+  display: flex;
+  align-items: center;
+  padding: 10px 80px 10px 0px;
+}
+
+.contact-info .address a,
+.contact-info .phone a,
+.contact-info .email a {
+  margin-left: 3px;
+}
+
+.contact-info .phone {
+  border-bottom: 1px solid #d8d8d8;
+  border-top: 1px solid #d8d8d8;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  background: #716690;
 }
 

@@ -13,6 +13,10 @@
 
 Route::get('/', function () {
     return view('main.main');
-});
+})->name('main');
+
+Route::get('contact', function () {
+    return view('contact.main');
+})->name('contact');
 
 Route::post('feedback', ['as' => 'feedback', 'uses' => 'FeedbackController@store']);

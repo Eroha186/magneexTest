@@ -1,5 +1,9 @@
 @extends('master')
 
+@php
+    $title = 'Главная'
+@endphp
+
 @section('content')
     @include('blocks.filter')
 

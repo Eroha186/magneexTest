@@ -17,10 +17,10 @@
                     Всего объектов: <span>45</span>
                 </div>
                 <div class="rol-up black-link">
-                    Свернуть
+                    {{ isset($hide) ? "Развернуть фильтр" : "Свернуть" }}
                 </div>
             </div>
-            <div class="filter-body">
+            <div class="filter-body" {{ isset($hide) ? 'style=display:none' : '' }}>
                 <div class="wrap-filters">
                     <div class="numbers-room">
                         <div class="filter-title">Количество комнат</div>
