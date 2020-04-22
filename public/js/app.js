@@ -283,7 +283,6 @@ $(function () {
     scroll: false,
     drag: function drag(event, ui) {
       var position = ui.position.left;
-      console.log(position);
 
       if (position >= 32) {
         $('.drag-arrow').hide();
@@ -321,7 +320,6 @@ $(function () {
     }
   });
   $('.filter-form').on('change', function () {
-    console.log('ok');
     $.ajax({
       url: '/ajaxLoadContRealty',
       method: 'post',
