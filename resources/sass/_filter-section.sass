@@ -69,8 +69,6 @@
     .street
         margin-right: 80px
         position: relative
-        #street
-            padding: 11px 90px 11px 40px
         .wrap-input-street
             position: relative
             &::before
@@ -182,10 +180,10 @@
 .wrap-filters
     display: flex
     margin-bottom: 40px
-.tab-items
+.type-realty-items
     display: flex
 
-.tab-item
+.type-realty-item
     padding: 15px 20px
     margin-right: 3px
     margin-bottom: 3px
@@ -217,3 +215,20 @@
 .ui-slider .ui-slider-range
     background: $purple
     border: 1px solid $purple
+
+// Стилизация селкт2
+.select2-container--default .select2-selection--single .select2-selection__arrow
+    display: none
+
+.select2-container--default .select2-selection--single
+    padding: 6px 40px
+    border-radius: unset
+    border: unset
+.select2-container .select2-selection--single
+    height: 40px
+.select2-selection.select2-selection--single.street-select-width
+    width: 320px
+.select2-dropdown
+    border: unset
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+    font-style: italic

@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main.main');
-})->name('main');
+Route::get('/', "MainPageController@index")->name('main');
 
-Route::get('contact', function () {
-    return view('contact.main');
-})->name('contact');
+Route::get('contact', "ContactPageController@index")->name('contact');
 
 Route::post('feedback', ['as' => 'feedback', 'uses' => 'FeedbackController@store']);
+
+Route::post('ajaxLoadContRealty', 'AjaxLoadController@ajaxLoadContRealty');
+
+Route::post('filter-realty', ['as' => 'filter-realty', 'uses' => 'FilterController@showResult']);
+

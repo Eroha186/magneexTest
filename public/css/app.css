@@ -57,6 +57,19 @@ input {
   list-style: none;
 }
 
+.result-filter {
+  margin: 40px 0px;
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+
+.result-filter th,
+.result-filter td {
+  text-align: center;
+  border: 1px solid grey;
+  padding: 3px;
+}
+
 .white-link {
   color: white;
   text-decoration: none;
@@ -368,10 +381,6 @@ header {
   position: relative;
 }
 
-.filter .street #street {
-  padding: 11px 90px 11px 40px;
-}
-
 .filter .street .wrap-input-street {
   position: relative;
 }
@@ -538,11 +547,11 @@ header {
   margin-bottom: 40px;
 }
 
-.tab-items {
+.type-realty-items {
   display: flex;
 }
 
-.tab-item {
+.type-realty-item {
   padding: 15px 20px;
   margin-right: 3px;
   margin-bottom: 3px;
@@ -552,7 +561,7 @@ header {
   cursor: pointer;
 }
 
-.tab-item_active {
+.type-realty-item_active {
   color: white;
   background: #716690;
 }
@@ -580,6 +589,32 @@ header {
 .ui-slider .ui-slider-range {
   background: #716690;
   border: 1px solid #716690;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  display: none;
+}
+
+.select2-container--default .select2-selection--single {
+  padding: 6px 40px;
+  border-radius: unset;
+  border: unset;
+}
+
+.select2-container .select2-selection--single {
+  height: 40px;
+}
+
+.select2-selection.select2-selection--single.street-select-width {
+  width: 320px;
+}
+
+.select2-dropdown {
+  border: unset;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  font-style: italic;
 }
 
 .news {

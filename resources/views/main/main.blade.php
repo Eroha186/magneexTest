@@ -11,5 +11,4 @@
 
     @include('blocks.about-company')
 
-    @include('popups.popup-feedback')
 @endsection

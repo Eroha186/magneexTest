@@ -1,10 +1,10 @@
 $(function () {
 
-    $('.tab-item').on('click', function () {
-        $('.tab-item').each(function () {
-            $(this).removeClass('tab-item_active');
+    $('.type-realty-item').on('click', function () {
+        $('.type-realty-item').each(function () {
+            $(this).removeClass('type-realty-item_active');
         })
-        $(this).toggleClass('tab-item_active');
+        $(this).toggleClass('type-realty-item_active');
     })
 
     $('.numbers-room-item').on('click', function () {
@@ -29,11 +29,19 @@ $(function () {
             $('.filter-body').show();
             $(this).text('Свернуть')
         }
-    })
+    });
+
+    $("#street").select2({
+        placeholder: "Выберите улицу",
+        width: 320,
+    });
+
+    $("#district").select2({
+        placeholder: "Выберите район",
+        width: 265,
+    });
 
     let advancedFilter = $('.advanced-filter');
-
-    advancedFilter.hide();
 
     $('.advanced-filter-btn').on('click', function () {
         if(advancedFilter.is(':visible')) {
@@ -57,6 +65,9 @@ $(function () {
         slide: function (event, ui) {
             $('#from-price').val(ui.values[0]);
             $('#before-price').val(ui.values[1]);
+        },
+        stop: function (event, ui) {
+            $('.filter-form').trigger('change');
         }
     });
 
@@ -69,6 +80,9 @@ $(function () {
         slide: function (event, ui) {
             $('#from-area').val(ui.values[0]);
             $('#before-area').val(ui.values[1]);
+        },
+        stop: function (event, ui) {
+            $('.filter-form').trigger('change');
         }
     });
 
@@ -162,11 +176,6 @@ $(function () {
         }
     });
 
-    $('form.filter').on('submit', function (e) {
-        e.preventDefault();
-        console.log($(this).serializeArray());
-    })
-
     $('.slider').slick({
         infinite: true,
         slidesToShow: 3,
@@ -220,7 +229,6 @@ $(function () {
 
     $(".popup-open").on("click", function () {
         $('.popup-wrap').show();
-
     });
 
     $('.popup-bg').on("click", function () {
@@ -236,6 +244,21 @@ $(function () {
         if($('#confirm').prop('checked')) {
             $('form.popup').submit()
         }
-        console.log($(this).serialize())
     });
+
+
+    $('.filter-form').on('change', function () {
+        console.log('ok');
+        $.ajax({
+            url: '/ajaxLoadContRealty',
+            method: 'post',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: $(this).serialize(),
+            success: function (e) {
+                $('.numbers-object').text(e.slice(-1) == '1' ?  e +  " объект" : e +  " объектов")
+            }
+        })
+    })
 });
