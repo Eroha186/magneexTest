@@ -11,7 +11,7 @@
                 <label for="type-realty-2" class="type-realty-item">Новостройка</label>
                 <label for="type-realty-3" class="type-realty-item">Аренда жилья</label>
                 <label for="type-realty-4" class="type-realty-item">Дома / Коттеджи</label>
-                <label for="type-realty-5" class="type-realty-item">Коммреческая недвижимость</label>
+                <label for="type-realty-5" class="type-realty-item">Коммерческая недвижимость</label>
                 <input type="radio" id="type-realty-1" name="type-realty" value="1" hidden checked>
                 <input type="radio" id="type-realty-2" name="type-realty" value="2" hidden>
                 <input type="radio" id="type-realty-3" name="type-realty" value="3" hidden>

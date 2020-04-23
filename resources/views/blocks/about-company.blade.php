@@ -2,7 +2,7 @@
     <img src="{{ asset("images/house.png") }}" alt="" class="house">
     <div class="container">
         <h1 class="section-title">
-            Агенство недвижимости "Ника" - <br>
+            Агентство недвижимости "Ника" - <br>
             Исполняем мечты!
         </h1>
         <p>

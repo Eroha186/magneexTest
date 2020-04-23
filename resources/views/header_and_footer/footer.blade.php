@@ -4,10 +4,10 @@
             <img src="{{ asset('images/nika_logo.png') }}" alt="">
             <div class="footer-contact">
                 <div class="name-company">
-                    &copy; 2003-{{ date('Y') }} Агенство недвижимости "Ника"
+                    &copy; 2003-{{ date('Y') }} Агентство недвижимости "Ника"
                 </div>
                 <div class="address">
-                    г. Абкан, Чертыгашева, 102
+                    г. Абакан, Чертыгашева, 102
                 </div>
                 <div class="phone">
                     Телефон: <a href="tel:(3902)305599">(3902) 30-55-99</a>

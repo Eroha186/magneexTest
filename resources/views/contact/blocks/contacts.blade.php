@@ -3,7 +3,7 @@
         {{ Breadcrumbs::render('contact') }}
 
         <div class="title-section">
-            Контакная информация
+            Контактная информация
         </div>
         <div class="contact-info-wrap">
             <div class="contact-info">

@@ -17,7 +17,7 @@ class TypeRealtySeeder extends Seeder
             'Новостройка',
             'Аренда жилья',
             'Дома / Коттеджи',
-            'Коммреческая недвижимость'
+            'Коммерческая недвижимость'
         ];
 
         foreach ($types as $type) {

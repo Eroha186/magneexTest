@@ -1,7 +1,7 @@
 @extends('master')
 
 @php
-    $title = 'Контанкты'
+    $title = 'Контакты'
 @endphp
 
 @section('content')

@@ -31,7 +31,7 @@
                    <li class="nav-item"><a href="">О компании</a></li>
                    <li class="nav-item"><a href="">Новости</a></li>
                    <li class="nav-item"><a href="">Ипотека</a></li>
-                   <li class="nav-item"><a href="">Аналитиика</a></li>
+                   <li class="nav-item"><a href="">Аналитика</a></li>
                    <li class="nav-item"><a href="">Учебный центр</a></li>
                    <li class="nav-item"><a href="">Приглашаем в команду</a></li>
                </ul>
